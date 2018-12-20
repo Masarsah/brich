@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS be_rich;
-CREATE DATABASE be_rich;
-\c be_rich
+-- DROP DATABASE IF EXISTS be_rich;
+-- CREATE DATABASE be_rich;
+-- \c be_rich
 
 -- create portfolio
 CREATE TABLE portfolios (
