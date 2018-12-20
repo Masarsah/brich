@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS be_rich;
-CREATE DATABASE be_rich;
-\c be_rich
+-- DROP DATABASE IF EXISTS be_rich;
+-- CREATE DATABASE be_rich;
+-- \c be_rich
 
 -- create portfolio
 CREATE TABLE portfolios (
@@ -54,7 +54,7 @@ If you just spend money you have saved, that could be called your source of inco
 
 INSERT INTO portfolios
   (username, email, password_digest, budget)
-VALUES ('Masarah', 'masadsf@gmail.com', '$2b$10$BiwRH51MbQ5Cssns9l18tOYMVk3F1c7HAyphevSFJxhrYRnmbEPiq', '500000'),
+VALUES ('Masarah', 'masasf@gmail.com', '$2b$10$BiwRH51MbQ5Cssns9l18tOYMVk3F1c7HAyphevSFJxhrYRnmbEPiq', '500000'),
 ('Huda', 'wkjekj@jsdhjk.com', '$2b$10$BiwRH51MbQ5Cssns9l18tOYMVk3F1c7HAyphevSFJxhrYRnmbEPiq', '10000'),
 ('Basayer', 'djskldfj@gmail.com', '$2b$10$BiwRH51MbQ5Cssns9l18tOYMVk3F1c7HAyphevSFJxhrYRnmbEPiq', '30000'),
 ('Raed',' jskwfk@gmail.com', '$2b$10$BiwRH51MbQ5Cssns9l18tOYMVk3F1c7HAyphevSFJxhrYRnmbEPiq','6000'),
