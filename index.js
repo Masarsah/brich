@@ -3,7 +3,7 @@
 
 var express = require('express');
 var mustache = require('mustache-express');
-var port = 3000;
+var port = process.env.PORT || 3000;
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var methooverride = require('method-override')
