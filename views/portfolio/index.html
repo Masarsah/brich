@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo"><img src="/static/images/logo.png" width="35%"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/posts">Post</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/portfolio/{{portfolioList.id}}">Your</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header">Join us and save your money</div>
+
+        <ul>
+            <a href="/login">
+                <div class="btn waves-effect waves-light">
+                    <li>log in</li>
+                </div>
+            </a>
+            <a href="portfolio/new">
+                <div class="btn waves-effect waves-light">
+                    <li>Sign in</li>
+                </div>
+            </a> </ul>
+    </header>
+
+    <div class="row" >
+
+        {{#portfolios}}
+        <div class="col s12 m6 l3">
+            <div class="card card Small grey lighten-2 ">
+                <div class="card-content white-text">
+                    <table class=" grey lighten-2">
+                        <tr>
+                            <td>
+                                <h4> <a href="/portfolio/{{id}}">{{username}}</a></h4>
+                            </td>
+                            <td>
+                                <h4>{{budget}}</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+                {{/portfolios}}
+
+
+    </div>
+</body>
+
+</html>

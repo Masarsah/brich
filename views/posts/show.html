@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo"><img src="/static/images/logo.png" width="35%"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/posts">Post</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/portfolio/{{portfolioList.id}}">Your</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="header">Join us and save your money</div>
+
+    <ul>
+      <a href="/login">
+        <div class="btn waves-effect waves-light">
+          <li>log in</li>
+        </div>
+      </a>
+      <a href="portfolio/new">
+        <div class="btn waves-effect waves-light">
+          <li>Sign in</li>
+        </div>
+      </a> </ul>
+  </header>
+
+  <div class="row">
+    <a href="/posts">go back to all posts</a>
+    {{#post}}
+    <div class="col s12 m4 l8">
+      <h1>{{name}}</h1>
+      <img src="{{post.image}}" alt="{{post.name}}">
+      <p>{{description}}</p>
+      {{/post}}
+      {{#portfolioAttendance}}
+      <form action="/posts/{{post.id}}/register?_method=DELETE" method="post">
+        <button type="submit">de-like</button>
+      </form>
+      {{/portfolioAttendance}}
+      {{^portfolioAttendance}}
+      <form action="/posts/{{post.id}}/register" method="post">
+        <button type="submit">like</button>
+      </form>
+      {{/portfolioAttendance}}
+
+    </div>
+    <form action="/posts/{{post.id}}?_method=DELETE" method="post">
+      <button type="submit">Delete post</button>
+    </form>
+  </div>
+</body>
+
+</html>

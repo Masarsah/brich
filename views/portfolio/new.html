@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+]
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+  <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+
+  <title>Register</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo"><img src="/static/images/logo.png" width="35%"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/posts">Post</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/portfolio/{{portfolioList.id}}">Your</a></li>
+          </ul>
+        </div>
+      </nav>
+
+<header>
+<div class="header">Join us and save your money</div>
+
+<ul>
+    <a href="/login">
+        <div class="btn waves-effect waves-light">
+            <li>log in</li>
+        </div>
+    </a>
+    <a href="portfolio/new">
+        <div class="btn waves-effect waves-light">
+            <li>Sign in</li>
+        </div>
+    </a> </ul>
+</header>
+  <h1>Create a User</h1>
+  <form action="/portfolio/{{portfolio.id}}?_method=POST" method="POST">
+    <label for="username">
+      username: <input type="text" id="username" name="username">
+    </label>
+    <input type="text" name="email" id="email" placeholder="email">
+    <input type="password" name="password" placeholder="password">
+    <label for="budget">
+            budget: <input type="text" id="budget" name="budget">
+          </label>
+<!-- <input type="text" name=""> -->
+
+    <button type="submit">Create portfolio</button>
+  </form>
+
+</body>
+</html>

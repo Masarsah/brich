@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <!-- Compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified JavaScript -->
+  
+  <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All posts</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo"><img src="/static/images/logo.png" width="35%"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/posts">Post</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/portfolio/{{portfolioList.id}}">Your</a></li>
+          </ul>
+        </div>
+      </nav>
+
+<header>
+<div class="header">Join us and save your money</div>
+
+<ul>
+    <a href="/login">
+        <div class="btn waves-effect waves-light">
+            <li>log in</li>
+        </div>
+    </a>
+    <a href="portfolio/new">
+        <div class="btn waves-effect waves-light">
+            <li>Sign in</li>
+        </div>
+    </a> </ul>
+</header>
+
+
+
+  <div class="datepicker-container.modal-content">
+    <div class="row">
+      {{#posts}}
+      <div class="col s12 m6 l3">
+          <div class="card card small grey lighten-2 ">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{image}}" alt="{{name}}">
+
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{name}}<i class="material-icons right">more_vert</i></span>
+          <p><a href="/posts/{{id}}">Read more</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+          <p>{{description}}</p>
+        </div>
+      </div>
+      </div>
+      {{/posts}}
+      <a href="/posts/new" class="btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

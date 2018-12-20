@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+    <title>Be Rich</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo"><img src="/static/images/logo.png" width="35%"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/posts">Post</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/portfolio/{{id}}">Your</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header">Join us and save your money</div>
+
+        <ul>
+            <a href="/login">
+                <div class="btn waves-effect waves-light">
+                    <li>log in</li>
+                </div>
+            </a>
+            <a href="portfolio/new">
+                <div class="btn waves-effect waves-light">
+                    <li>Sign in</li>
+                </div>
+            </a> </ul>
+    </header>
+
+
+    <div class="datepicker-container.modal-content">
+        <div class="row">
+            {{#portfolioList}}
+
+
+            <div class="col s12 m6 l3">
+                <div class="card card small grey lighten-2 ">
+                    <div class="card-content white-text">
+                        <span class="card-title"><a href="/portfolio/{{id}}"> {{username}} </a></span>
+                        <h1> {{budget}}</h1>
+
+                        <div class="card-action">
+                            <a href="/portfolio/{{id}}">view Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/portfolioList}}
+        </div>
+
+        <a href="/portfolio" class="btn waves-effect waves-light "> SEE All Portfolio</a>
+
+        <div class="row">
+            {{#postList}}
+
+            <div class="col s12 m6 l3">
+                <div class="card card Small grey lighten-2 ">
+                    <div class="card-content white-text">
+                        <div class="card-image Small">
+                            <img src="{{image}}" alt="{{name}}">
+                        </div>
+                        <span class="card-title "> {{name}}</span>
+
+                        <div class="card-action">
+                            <a href="/posts/{{id}}">view Post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/postList}}
+        </div>
+
+        
+        <a href="/posts" class="btn waves-effect waves-light "> SEE All Post</a>
+    </div>
+    </div>
+    <footer class="page-footer">
+
+        <div class="footer-copyright  ">
+            <div class="container green-text.text-lighten-1">
+                © 2014 Copyright Masarah and Made with excitement and love ♥️
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

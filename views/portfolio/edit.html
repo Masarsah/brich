@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+
+      <title>Edit</title>
+</head>
+
+<body>
+      <nav>
+            <div class="nav-wrapper">
+                  <a href="/" class="brand-logo"><img src="/static/images/logo.png" width="35%"></a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/posts">Post</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/portfolio/{{portfolioList.id}}">Your</a></li>
+                  </ul>
+            </div>
+      </nav>
+
+      <header>
+            <div class="header">Join us and save your money</div>
+
+            <ul>
+                  <a href="/login">
+                        <div class="btn waves-effect waves-light">
+                              <li>log in</li>
+                        </div>
+                  </a>
+                  <a href="portfolio/new">
+                        <div class="btn waves-effect waves-light">
+                              <li>Sign in</li>
+                        </div>
+                  </a> </ul>
+      </header>
+      <!-- 
+      <table>
+            <tr>
+            
+                  <td rowspan="2"> <i id="one" class="material-icons">person</i></td>
+
+                  <td>
+                        <form action="/portfolio/{{portfolio.id}}?_method=PUT" method="post">
+                              <label for="subject">
+                                    username: <input type="text" name="username" id="username" value="{{portfolio.username}}">
+                              </label> 
+                              <button type="submit">edit</button>
+                        </form>
+                  </td>
+
+            </tr>
+            <tr>
+                  <td> <label for="subject">
+
+                              budget: <input type="text" name="budget" id="budget" value="{{portfolio.budget}}"
+                                    required> SAR
+                        </label>
+                        <input type="hidden" name="email" value="{{portfolio.email}}">
+                        <input type="hidden" name="password_digest" value="{{portfolio.password_digest}}">
+
+
+
+                  </td>
+                  </td>
+            </tr>
+
+            <tr>
+                  <td colspan="2">
+                        <h6>{{#chartdata}}</h6>
+
+                        <label>{{labels[]}}</label>
+                        <label class="labeleinput" for="content">
+                              {{#labels}}
+                              Expense: <input type="text" name="labels[]" id="labels" value="{{.}}">
+                              <br>
+                              {{/labels}}
+                              {{#data}}
+                              Cost: <input type="text" name="data[]" id="data" value="{{.}}">
+                              <br>
+                              {{/data}}
+                        </label>
+                        <div onclick="myFunction()"><i id="two" class="material-icons">playlist_add</i></div>
+                        <h6>{{/chartdata}} </h6>
+                  </td>
+            </tr>
+
+
+      </table> -->
+      <div class="row">
+
+            <div class="centered center-align">
+                  <div class="col s12 m4 l2">
+                        <p>s12 m4</p>
+                  </div>
+                  <div class="col s12 m4 l8">
+                        <form action="/portfolio/{{portfolio.id}}?_method=PUT" method="post">
+                              <table>
+                                    <tr>
+                                          <td rowspan="2"> <i id="one" class="material-icons">person</i></td>
+
+                                          <td> <label for="subject">
+                                                      username: <input type="text" name="username" id="username" value="{{portfolio.username}}">
+                                                </label> </td>
+
+                                    </tr>
+                                    <tr>
+                                          <td> <label for="subject">
+                                                      budget: <input type="text" name="budget" id="budget" value="{{portfolio.budget}}"
+                                                            required> SAR
+                                                </label>
+                                                <input type="hidden" name="email" value="{{portfolio.email}}">
+                                                <input type="hidden" name="password_digest" value="{{portfolio.password_digest}}">
+
+
+
+                                          </td>
+                                          </td>
+                                    </tr>
+
+                                    <tr>
+                                          <td colspan="2">
+                                                <h6>{{#chartdata}}</h6>
+
+                                                <label class="labeleinput" for="content">
+                                                      {{#labels}}
+                                                      Expense: <input type="text" name="labels[]" id="labels" value="{{.}}">
+                                                      <br>
+                                                      {{/labels}}
+                                                      {{#data}}
+                                                      Cost: <input type="text" name="data[]" id="data" value="{{.}}">
+                                                      <br>
+                                                      {{/data}}
+                                                </label>
+                                                <div onclick="myFunction()"><i id="two" class="material-icons">playlist_add</i></div>
+                                                <h6>{{/chartdata}} </h6>
+
+                                                <input type="text" name="newLabel" id="newLabel" hidden>
+                                                <input type="text" name="newData" id="newData" hidden>
+
+                                          </td>
+                                    </tr>
+
+
+                              </table>
+
+                              <button type="submit">change</button>
+                        </form>
+                  </div>
+            </div>
+      </div>
+      <button onclick="showData()">showData</button>
+      <button onclick="showFormData()">formData</button>
+      <script src="/static/script/main.js"></script>
+</body>
+
+</html>

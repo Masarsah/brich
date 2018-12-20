@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+]
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+  <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+
+  <title>Register</title>
+</head>
+<body>
+  <h1>Edit Entry</h1>
+  <form action="/posts/{{id}}?_method=PUT" method="post">
+    <label for="subject">
+            name: <input type="name" name="name" id="name" value="{{name}}">
+    </label>
+    <label for="content">
+            description: <input type="text" name="description" id="description" value="{{description}}">
+    </label>
+    <button type="submit">submit changes</button>
+  </form>
+</body>
+</html>
