@@ -17,9 +17,9 @@
     "wallet",
     "value"
   ],
-  "engines":{
+  "engines": {
     "node": "v11.3.0"
-      },
+  },
   "author": "masarah ahmad",
   "license": "ISC",
   "bugs": {

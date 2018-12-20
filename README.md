@@ -1,10 +1,9 @@
-# brich
-be rich it is display of a wallet 
+# Project2-brich
+Times are tough. Whether you earn a lot or just get by, watching where your money goes is important. so in order to be rich you have to be a 
 
 
 
-# NPM 
-npm install chart.js --save
+
 
 
 Explanations of the technologies used
@@ -13,9 +12,8 @@ Wireframes
 User Stories
 
 
-# Project1-Sudoku
 
-a puzzle in which players insert the numbers one to nine into a grid consisting of nine squares subdivided into a further nine smaller squares in such a way that every number appears once in each horizontal line, vertical line, and square.
+
 
 
 
@@ -54,11 +52,14 @@ a puzzle in which players insert the numbers one to nine into a grid consisting 
 * the computer button click solve
 
 ## User Stories
-* if user solve the puzzle false
-* the computer button click solve
+* user will be a wear of every money he put  
+* and ther is a post and artical about save a money 
 ## Unsolved problems
 * array input in sql create array
-* 
+
+
+# NPM 
+npm install chart.js --save
 
 ## Shoutouts
 * many thanks for Ghadeer
